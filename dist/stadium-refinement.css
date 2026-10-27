@@ -55,12 +55,8 @@ body::after{display:none}
 @media(max-width:420px){.intro-line{font-size:19px;letter-spacing:-.4px}.service-link>.arrow{width:24px;height:24px}}
 @media(max-width:340px){.intro-line{font-size:16px}.service-link>.arrow{width:22px;height:22px}}
 
-/* Crédito discreto da desenvolvedora e contato para orçamento. */
-.developer-card{display:flex;align-items:center;justify-content:space-between;gap:14px;text-align:left;margin-top:20px;padding:14px 15px;border:1px solid #9bc6ad24;border-radius:13px;background:linear-gradient(120deg,#a2c9b008,#a2c9b003);color:#acbeb5;transition:border-color .2s,background .2s}
-.developer-card:hover{border-color:#8accaa55;background:#8bc6a40b}
-.developer-credit small{display:block;font-size:8px;line-height:1.6;color:#87998e}
-.developer-credit strong{display:block;font-size:11px;line-height:1.5;font-weight:700;letter-spacing:.1px;color:#c4d5ca}
-.developer-cta{font-size:8px;line-height:1.6;text-align:right;color:#87998e}
-.developer-cta small{display:block;font-size:9px;color:#b6cebf;margin-top:3px}
-.developer-cta small span{display:inline-block;margin-left:3px;font-size:15px;line-height:1;vertical-align:-1px}
-@media(max-width:340px){.developer-card{padding:12px 10px;gap:8px}.developer-cta{max-width:130px}}
+/* Crédito independente abaixo do painel principal. */
+.developer-card{display:flex;align-items:center;justify-content:center;width:min(100%,484px);margin:18px auto 0;padding:14px 18px;text-align:center;border:1px solid #9bc6ad24;border-radius:16px;background:#0d1513bd;color:#acbeb5;transition:border-color .2s,background .2s;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.developer-card:hover{border-color:#8accaa55;background:#14211ae0}
+.developer-credit small{display:block;font-size:9px;line-height:1.6;color:#94a89b}
+.developer-credit strong{display:block;font-size:12px;line-height:1.7;font-weight:700;letter-spacing:.1px;color:#c4d5ca}
