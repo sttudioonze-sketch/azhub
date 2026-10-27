@@ -3,7 +3,7 @@
   const ctx = canvas?.getContext('2d');
   if (!ctx) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const spacing = 24;
+  const spacing = 16;
   let width = 0, height = 0, points = [], frame = 0, lastDraw = -Infinity;
   const hash = n => { const v = Math.sin(n * 127.1 + 311.7) * 43758.5453; return v - Math.floor(v); };
   function resize() {
@@ -14,8 +14,8 @@
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     canvas.style.background = 'none';
     points = [];
-    for (let y = 12, row = 0; y < height; y += spacing, row++) {
-      for (let x = 12, col = 0; x < width; x += spacing, col++) {
+    for (let y = spacing / 2, row = 0; y < height; y += spacing, row++) {
+      for (let x = spacing / 2, col = 0; x < width; x += spacing, col++) {
         const seed = row * 173 + col * 31;
         points.push({x, y, seed, phase: hash(seed + 9) * 15, period: 9 + hash(seed + 4) * 8});
       }
