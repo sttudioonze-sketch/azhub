@@ -1,0 +1,66 @@
+/* Cores da marca e textura uniforme; sem reflexos metálicos fortes. */
+body{position:relative;isolation:isolate;background:#020303}
+body::before{display:none}
+body::after{display:none}
+.hub{background:linear-gradient(145deg,#b5d8e00b,#14202b38 50%,#a0bfc608);box-shadow:inset 0 1px 0 #e7f8ff24,0 26px 80px #0004}
+.intro{padding-top:28px;overflow:hidden}
+.intro::before{inset:0 -10px;background:linear-gradient(#0b131900 0%,#0b131926 40%,#0b1319cc 83%,#0b131900 100%)}
+.ambient-scene{position:absolute;inset:2px -29px -2px;z-index:-2;pointer-events:none;background:linear-gradient(#070e1859 0%,#06101547 43%,#0b151cbd 78%,#0b151cfa 100%),url('assets/estadio-noturno.webp') center 48%/cover no-repeat;mask-image:linear-gradient(transparent,#000 13%,#000 78%,transparent);-webkit-mask-image:linear-gradient(transparent,#000 13%,#000 78%,transparent);opacity:.92}
+.metal-logo{filter:drop-shadow(0 3px 0 #061c0f99) drop-shadow(0 8px 16px #0005)}
+.metal-logo::before{background:url('assets/textura-azhub.jpg') center 48%/cover no-repeat;opacity:.3;mix-blend-mode:soft-light;filter:grayscale(1) contrast(.7);animation:none}
+.metal-logo::after{display:none;animation:none}
+.intro-line{position:relative;text-shadow:0 2px 16px #030b10a6}
+.intro-support{position:relative;color:#b8c6ce}
+@media(max-width:420px){.ambient-scene{inset:2px -21px -2px}}
+@media(max-width:340px){.ambient-scene{inset-inline:-17px}}
+@media(prefers-reduced-motion:reduce){body::before,body::after,.ambient-scene{animation:none;will-change:auto;transform:none}}
+
+/* Logo aprovado em relevo; somente tema escuro. */
+:root{color-scheme:dark}
+.metal-logo{aspect-ratio:1295/1214;filter:drop-shadow(0 6px 12px #0006)}
+.metal-logo::before,.metal-logo::after{display:none;animation:none}
+
+/* Iteração 5: serviços verdes, brilho discreto e entradas escalonadas. */
+.intro{padding-top:12px}
+.service-link{background:linear-gradient(125deg,#16894e66,#0b513b80 60%,#123f3599);border-color:#66d79855;box-shadow:inset 0 1px 0 #bdffcf26,0 8px 24px #0003}
+.service-link::before{background:linear-gradient(90deg,transparent,#b4ffd44d,transparent)}
+.service-link:hover{background:linear-gradient(125deg,#1b9d5a80,#12654980);border-color:#87e8b28c;box-shadow:inset 0 1px 0 #caffde40,0 12px 30px #0003}
+.service-link .service-icon{color:#a2ecc0}
+.service-link .service-text small,.service-link .arrow{color:#bfdacb}
+.metal-logo::after{display:block;inset:0;mask:url('assets/logo-relevo-escovado.webp') center/100% 100% no-repeat;-webkit-mask:url('assets/logo-relevo-escovado.webp') center/100% 100% no-repeat;background:linear-gradient(112deg,transparent 40%,#ffffff0a 45%,#ffffffb3 49%,#ffffff0a 53%,transparent 58%);background-size:350% 100%;mix-blend-mode:screen;animation:logo-soft-shine 10s ease-in-out infinite;opacity:0}
+@keyframes logo-soft-shine{0%,18%{background-position:100% center;opacity:0}26%{opacity:.23}48%{background-position:0% center;opacity:.23}58%,100%{background-position:0% center;opacity:0}}
+.hub{animation:hub-enter .75s ease-out both}
+.metal-logo,.intro-line,.intro-support,.section-heading,.service-link,footer{animation:content-enter .7s cubic-bezier(.22,1,.36,1) both}
+.metal-logo{animation-delay:.1s}.intro-line{animation-delay:.2s}.intro-support{animation-delay:.3s}.section-heading{animation-delay:.38s}
+.service-link:nth-child(1){animation-delay:.45s}.service-link:nth-child(2){animation-delay:.56s}.service-link:nth-child(3){animation-delay:.67s}footer{animation-delay:.78s}
+@keyframes hub-enter{from{opacity:0}to{opacity:1}}
+@keyframes content-enter{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){.hub,.metal-logo,.intro-line,.intro-support,.section-heading,.service-link,footer{animation:none;opacity:1;translate:none}.metal-logo::after{display:none;animation:none}}
+
+
+
+/* Malha de pontos nítidos, renderizada na densidade real da tela. */
+.dot-background{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;background:radial-gradient(circle at 1px 1px,#b6c9bf27 .65px,transparent 1px) 12px 12px/24px 24px}
+.hub{background:linear-gradient(145deg,#12201ce8,#0b1414e8 52%,#10191bec)}
+
+/* Tipografia digital em destaque apenas nos títulos dos serviços. */
+.service-text strong{font-family:Orbitron,Manrope,sans-serif;font-size:16px;line-height:1.4;font-weight:700;letter-spacing:.1px;color:#f2fff6}
+.service-text small{margin-top:6px}
+@media(max-width:420px){.service-text strong{font-size:15px}}
+@media(max-width:340px){.service-text strong{font-size:13px}}
+
+/* Cabeçalho Orbitron e setas diagonais maiores. */
+.intro-line{font-family:Orbitron,Manrope,sans-serif;font-size:23px;line-height:1.5;letter-spacing:-.5px;font-weight:600}
+.service-link>.arrow{width:27px;height:27px;stroke-width:1.8;color:#c1f6d5}
+@media(max-width:420px){.intro-line{font-size:19px;letter-spacing:-.4px}.service-link>.arrow{width:24px;height:24px}}
+@media(max-width:340px){.intro-line{font-size:16px}.service-link>.arrow{width:22px;height:22px}}
+
+/* Crédito discreto da desenvolvedora e contato para orçamento. */
+.developer-card{display:flex;align-items:center;justify-content:space-between;gap:14px;text-align:left;margin-top:20px;padding:14px 15px;border:1px solid #9bc6ad24;border-radius:13px;background:linear-gradient(120deg,#a2c9b008,#a2c9b003);color:#acbeb5;transition:border-color .2s,background .2s}
+.developer-card:hover{border-color:#8accaa55;background:#8bc6a40b}
+.developer-credit small{display:block;font-size:8px;line-height:1.6;color:#87998e}
+.developer-credit strong{display:block;font-size:11px;line-height:1.5;font-weight:700;letter-spacing:.1px;color:#c4d5ca}
+.developer-cta{font-size:8px;line-height:1.6;text-align:right;color:#87998e}
+.developer-cta small{display:block;font-size:9px;color:#b6cebf;margin-top:3px}
+.developer-cta small span{display:inline-block;margin-left:3px;font-size:15px;line-height:1;vertical-align:-1px}
+@media(max-width:340px){.developer-card{padding:12px 10px;gap:8px}.developer-cta{max-width:130px}}
