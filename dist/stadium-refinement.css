@@ -78,7 +78,8 @@ body::after{display:none}
 .service-tagline{display:block;margin-top:8px;font-size:10px;line-height:1.6;color:#e0f2e7}
 .service-link:nth-child(4){animation-delay:.78s}
 footer{animation-delay:.89s;padding-top:12px}
-@media(max-width:420px){.service-link{min-height:156px;gap:9px;padding:17px 12px}.service-icon{width:25px}.service-icon svg{width:24px;height:24px}.service-link>.arrow{width:20px;height:20px}.service-text strong{font-size:14px}.service-text small{font-size:10px}.service-tagline{font-size:10px}}
+@media(max-width:600px){.service-link{min-height:0;padding-block:12px}.service-text small{margin-top:4px}.service-tagline{margin-top:4px}}
+@media(max-width:420px){.service-link{gap:9px;padding:12px}.service-icon{width:25px}.service-icon svg{width:24px;height:24px}.service-link>.arrow{width:20px;height:20px}.service-text strong{font-size:14px}.service-text small{font-size:10px}.service-tagline{font-size:10px}}
 @media(max-width:340px){.service-link{padding-inline:10px;gap:7px}.service-text strong{font-size:12px}.service-link>.arrow{width:18px;height:18px}}
 
 /* Ícones digitais com volume, inspirados na referência de acabamento. */
