@@ -1,6 +1,6 @@
 # AZHUB
 
-Página de links da AZHUB — André Zacha, com serviços de análise no futebol.
+Página de links da AZHUB, com serviços de análise no futebol.
 
 ## Executar localmente
 
